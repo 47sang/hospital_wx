@@ -1,3 +1,7 @@
 <!--pages/tabBar/home/home.wxml-->
 <text>pages/tabBar/home/home.wxml</text>
 <text>第一个页面，home首页</text>
+
+<view wx:for="{{navs}}" wx:key="navs">
+  <view>{{item.nav_title}}</view>
+</view>

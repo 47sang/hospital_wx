@@ -6,19 +6,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-    navs: [], //导航栏数据
-    headlines: [], //最头条数据
-    banners: [], //轮播图数据
-    general: [], //综合服务数据
-    departments: [], //科室导航数据
-    healthPush: [] //健康推送数据
+    //导航栏数据
+    navs: [],
+    //最头条数据
+    headlines: [],
+    //轮播图数据
+    banners: [],
+    //综合服务数据
+    general: [],
+    //科室导航数据
+    departments: [],
+    //健康推送数据
+    healthPush: [],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    
   },
 
   /**
@@ -32,13 +38,13 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-    this.getJsonApi();
-    
+    this.getHomeApi();
+
   },
   /**
    * 获取首页接口数据
    */
-  getJsonApi: function () {
+  getHomeApi: function () {
     wx.request({
       url: 'https://jj.hnwsjy.com/home',
       data: {},
@@ -49,19 +55,29 @@ Page({
       dataType: 'json',
       responseType: 'text',
       success: (result) => {
+
+        //将接口的数据保存到变量中
+        let rsdata = result.data.data;
+
+        let navs = rsdata.navs;
+        let headlines = rsdata.headlines;
+        let banners = rsdata.banners;
+        let general = rsdata.general;
+        let departments = rsdata.departments;
+        let healthPush = rsdata.healthPush;
+        //将数据发送到视图
         this.setData({
-          navs: result.data.data.navs,
-          headlines: result.data.data.headlines,
-          banners: result.data.data.banners,
-          general: result.data.data.general,
-          departments: result.data.data.departments,
-          healthPush: result.data.data.healthPush
+          navs: navs,
+          headlines: headlines,
+          banners: banners,
+          general: general,
+          departments: departments,
+          healthPush: healthPush
         })
-        console.log(result.data.data.navs);
-        console.log(navs);
+        console.log(rsdata);
       },
-      fail: () => {},
-      complete: () => {}
+      fail: () => { },
+      complete: () => { }
     });
   },
 })
