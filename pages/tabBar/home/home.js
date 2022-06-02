@@ -1,4 +1,5 @@
 // pages/tabBar/home/home.js
+const app = getApp();
 
 Page({
 
@@ -24,29 +25,30 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-
+    this.getHomeApi();
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow() {
-    this.getHomeApi();
 
   },
+
   /**
-   * 获取首页接口数据
-   */
-  getHomeApi: function () {
+     * 获取首页接口数据
+     */
+
+  getHomeApi() {
     wx.request({
-      url: 'https://jj.hnwsjy.com/home',
+      url: app.globalData.SERVICE+'home',
       data: {},
       header: {
         'content-type': 'application/json'
@@ -80,4 +82,6 @@ Page({
       complete: () => { }
     });
   },
+
+
 })

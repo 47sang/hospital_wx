@@ -5,3 +5,9 @@
 <view wx:for="{{navs}}" wx:key="navs">
   <view>{{item.nav_title}}</view>
 </view>
+<text class="name">123
+</text>
+
+<view hover-class="none">
+    <text wx:if="{{snow}}">snow</text>
+</view>

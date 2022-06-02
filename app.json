@@ -14,29 +14,32 @@
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#3775ff",
+    "borderStyle": "white",
     "list": [
       {
         "pagePath": "pages/tabBar/home/home",
         "text": "首页",
-        "iconPath": "/images/shouye-xianxing.png",        
+        "iconPath": "/images/shouye-xianxing.png",
         "selectedIconPath": "images/shouye.png"
       },
       {
         "pagePath": "pages/tabBar/health/health",
         "text": "健康圈",
-        "iconPath": "/images/shouye-xianxing.png",        
+        "iconPath": "/images/shouye-xianxing.png",
         "selectedIconPath": "images/shouye.png"
       },
       {
         "pagePath": "pages/tabBar/disease/disease",
         "text": "慢病管理",
-        "iconPath": "/images/shouye-xianxing.png",        
+        "iconPath": "/images/shouye-xianxing.png",
         "selectedIconPath": "images/shouye.png"
       },
       {
         "pagePath": "pages/tabBar/mine/mine",
         "text": "我的",
-        "iconPath": "/images/shouye-xianxing.png",        
+        "iconPath": "/images/shouye-xianxing.png",
         "selectedIconPath": "images/shouye.png"
       }
     ]
