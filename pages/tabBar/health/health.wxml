@@ -1,3 +1,39 @@
-<!--pages/tabBar/health/health.wxml-->
-<text>pages/tabBar/health/health.wxml</text>
-<text>第二个页面，健康圈文章列表</text>
+<!-- pages/tabBar/health/health.wxml -->
+<view wx:for="{{articleList}}" wx:for-item="health" wx:key="*this">
+    <view class="doctor">
+        <view class="doctor_avatar">
+            <image class="doctor_avatar_img" src="/images/ziliaoshouce.png"></image>
+        </view>
+        <view class="doctor_info">
+            <view class="doctor_info_name">
+                <text class="doctor_info_name_text">{{health.doctor_name}}</text>
+            </view>
+            <view class="article_datetime">
+                <text class="article_datetime">{{health.article_datetime}}</text>
+            </view>
+        </view>
+        <button class="btn" type="primary"  bindtap="onTap">
+            咨询TA
+        </button>
+    </view>
+    <view class="article">
+        <view class="article_title">
+            <text class="article_title_text">{{health.article_title}}</text>
+        </view>
+        <view class="article_content">
+            <text class="article_content_text">{{health.article_content}}</text>
+        </view>
+        <view class="keyword">
+            <text class="keyword_text">{{health.article_keywords}}</text>
+        </view>
+        <view class="info">
+            <view class="article_praise">
+                <text class="article_praise_text">{{health.article_praise}}点赞</text>
+            </view>
+            <view class="article_views">
+                <text class="article_views_text">{{health.article_views}}阅读</text>
+            </view>
+        </view>
+    </view>
+</view>
+>

@@ -3,7 +3,8 @@
     "pages/tabBar/home/home",
     "pages/tabBar/health/health",
     "pages/tabBar/disease/disease",
-    "pages/tabBar/mine/mine"
+    "pages/tabBar/mine/mine",
+    "pages/article/article"
   ],
   "window": {
     "backgroundTextStyle": "light",

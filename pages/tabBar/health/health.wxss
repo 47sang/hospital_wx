@@ -1,1 +1,7 @@
 /* pages/tabBar/health/health.wxss */
+
+.doctor_avatar_img{
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 50%;
+}

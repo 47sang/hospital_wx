@@ -36,7 +36,6 @@
     </view>
   </block>
 </view>
-
 <swiper autoplay="{{true}}" vertical="{{true}}" class="head" circular="{{true}}">
   <block wx:for="{{headlines}}" wx:key="*this">
     <swiper-item item-id="">
@@ -44,7 +43,6 @@
     </swiper-item>
   </block>
 </swiper>
-
 <swiper autoplay="{{true}}" class="banner" circular="{{true}}" indicator-dots="{{true}}">
   <block wx:for="{{banners}}" wx:key="*this">
     <swiper-item item-id="">
@@ -52,15 +50,47 @@
     </swiper-item>
   </block>
 </swiper>
-
 <view class="general">
   <view class="arction-title">综合服务</view>
   <view class="more">更多 ></view>
   <view class="general-list">
     <block wx:for="{{general}}" wx:for-item="gen" wx:for-index="gindex" wx:key="*this">
-      <view class="general-item" wx:if="{{gindex < 5}}" >
+      <view class="general-item" wx:if="{{gindex < 5}}">
         <image src="/images/ziliaoshouce.png" mode="aspectFill" lazy-load="{{true}}" class="general-img" />
         <text class="general-text">{{gen.nav_title}}</text>
+      </view>
+    </block>
+  </view>
+</view>
+<view class="departments">
+  <view class="arction-title">科室导航</view>
+  <view class="departments-list">
+    <block wx:for="{{departments}}" wx:for-item="dep" wx:key="*this">
+      <view class="departments-item" data-id="{{dep.department_id}}">
+        <image src="/images/ziliaoshouce.png" mode="aspectFill" lazy-load="{{true}}" class="general-img" />
+        <view class="departments-text">{{dep.department_name}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<view class="tool">
+  <image src="/images/shouye.png" mode="aspectFill"  class="tool-img"/>
+</view>
+<view class="healthPush">
+  <view class="arction-title">健康推送</view>
+  <view class="departments-list">
+    <block wx:for="{{healthPush}}" wx:for-item="push" wx:key="*this">
+      <view class="healthPush-item" data-id="{{push.article_id}}" bindtap="toArticle">
+        <view class="healthPush-title">{{push.article_title}}</view>
+        <view class="healthPush-content">{{push.article_content}}</view>
+        <view class="info">
+          <image class="comment-img" src="/images/shouye-xianxing.png"/>
+          <text class="comment-num">{{push.article_comments}}</text>
+          <image class="praise-img" src="/images/shouye.png"/>
+          <text class="praise-num">{{push.article_praise}}</text>
+        </view>
+        <view class="line"></view>
       </view>
     </block>
   </view>

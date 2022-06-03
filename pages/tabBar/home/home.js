@@ -86,6 +86,12 @@ Page({
   clickMe(e){
     console.log(e);
     console.log(e.target.id);
+  },
+  toArticle(e){
+    let id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '/pages/article/article?id='+id,
+    })
   }
 
 })

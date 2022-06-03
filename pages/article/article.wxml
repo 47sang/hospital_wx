@@ -1,0 +1,26 @@
+<!-- pages/article/article.wxml -->
+<view class="doctor">
+    <image class="doctor-avatar" src="/images/ziliaoshouce.png"></image>
+    <view class="doctor-name">{{doctor_name}}</view>
+</view>
+<view class="article">
+    <view class="article-title">{{article_title}}</view>
+    <view class="article-datetime">{{article_datetime}}</view>
+    <view class="article-content">{{article_content}}</view>
+</view>
+<view class="comment" wx:if="{{comment_flag}}">
+    <view class="article-comments">{{article_comments}}条评论</view>
+    <block wx:for="{{comments}}" wx:key="*this">
+        <view class="comment-item">
+            <view class="comment-item-avatar">
+                <image class="comment-item-avatar-image" src="/images/ziliaoshouce.png"></image>
+            </view>
+            <view class="comment-content">
+                <view  class="patient-id">{{patient_id}}</view>
+                <view  class="comment-datetime">{{comment_datetime}}</view>
+                <view  class="comment-content">{{comment_content}}</view>
+
+            </view>
+        </view>
+    </block>
+</view>
