@@ -83,5 +83,9 @@ Page({
     });
   },
 
+  clickMe(e){
+    console.log(e);
+    console.log(e.target.id);
+  }
 
 })

@@ -1,1 +1,121 @@
 /* pages/tabBar/home/home.wxss */
+.top {
+  padding-bottom: 80rpx;
+}
+
+.search-bar {
+  width: 80%;
+  height: 55rpx;
+  background: #fff;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 5rpx;
+  float: left;
+  margin-left: 20rpx;
+
+}
+
+.search-bar icon {
+  float: left;
+}
+
+.search-input {
+  float: left;
+  width: 90%;
+  height: 100%;
+  color: grey;
+  font-size: 17px;
+  padding-left: 5rpx;
+}
+
+.ring-img {
+  float: right;
+  width: 45rpx;
+  height: 45rpx;
+  margin: 13rpx 30rpx 0 0;
+}
+
+.slogan {
+  display: flex;
+  margin-top: 20rpx;
+  height: 80rpx;
+  margin-bottom: 20rpx;
+}
+
+.slogan-list {
+  flex: 1;
+  float: left;
+  margin-left: 20rpx;
+}
+
+.slogan-img {
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.img-nav {
+  padding-bottom: 20rpx;
+}
+
+.register {
+  float: left;
+  width: 300rpx;
+  height: 200rpx;
+  border: 1px solid grey;
+  border-radius: 10px;
+  background-color: aqua;
+  margin: 30rpx;
+}
+
+.consult {
+  float: right;
+  width: 300rpx;
+  height: 200rpx;
+  border: 1px solid grey;
+  border-radius: 10px;
+  background-color: aqua;
+  margin: 30rpx;
+}
+
+
+.nav-list-img {
+  width: 130rpx;
+  height: 130rpx;
+}
+
+.nav-list {
+  float: left;
+  margin: 0 28rpx 20rpx 28rpx;
+}
+
+.nav-item {
+  width: 130rpx;
+}
+
+.head {
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-bottom: 20rpx;
+  clear: both;
+}
+
+.banner {
+  clear: both;
+  height: 200rpx;
+  line-height: 150rpx;
+}
+.arction-title{
+  font-size: 45rpx;
+  font-weight: bold;
+  color: grey;
+}
+.general-item {
+  float: left;
+  width: 120rpx;
+  font-size: 30rpx;
+}
+
+.general-img {
+  width: 120rpx;
+  height: 120rpx;
+}

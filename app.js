@@ -2,7 +2,7 @@
 App({
 
   globalData: {
-    SERVICE: "https://jj.hnwsjy.com/",
+    SERVICE: "https://api.hnwsjy.com/",
   },
 
   /**

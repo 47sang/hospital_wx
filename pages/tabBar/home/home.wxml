@@ -1,13 +1,67 @@
-<!--pages/tabBar/home/home.wxml-->
-<text>pages/tabBar/home/home.wxml</text>
-<text>第一个页面，home首页</text>
-
-<view wx:for="{{navs}}" wx:key="navs">
-  <view>{{item.nav_title}}</view>
+<!-- pages/tabBar/home/home.wxml -->
+<view class="top">
+  <view class="search-bar">
+    <icon type="search" size="23" color="grey" />
+    <input type="text" class="search-input" placeholder="输入您想搜索的科室或医生" />
+  </view>
+  <view class="ring">
+    <image src="/images/weizhi.png" mode="aspectFill" lazy-load="{{true}}" class="ring-img" />
+  </view>
 </view>
-<text class="name">123
-</text>
+<view class="slogan">
+  <view class="slogan-list">
+    <image src="/images/weizhi.png" mode="aspectFill" lazy-load="{{true}}" class="slogan-img" />
+    <text class="slogan-text">三甲名医</text>
+  </view>
+  <view class="slogan-list">
+    <image src="/images/weizhi.png" mode="aspectFill" lazy-load="{{true}}" class="slogan-img" />
+    <text class="slogan-text">权威认证</text>
+  </view>
+  <view class="slogan-list">
+    <image src="/images/weizhi.png" mode="aspectFill" lazy-load="{{true}}" class="slogan-img" />
+    <text class="slogan-text">服务监管</text>
+  </view>
+</view>
+<view class="img-nav">
+  <view class="register">门诊挂号</view>
+  <view class="consult">在线问诊</view>
+</view>
+<view class="navs">
+  <block wx:for="{{navs}}" wx:key="*this">
+    <view class="nav-list">
+      <view class="nav-item" bind:tap="clickMe" data-url="{{item.nav_url}}">
+        <image src="/images/ziliaoshouce.png" mode="aspectFill" lazy-load="{{true}}" class="nav-list-img" />
+        <text class="nav-text">{{item.nav_title}}</text>
+      </view>
+    </view>
+  </block>
+</view>
 
-<view hover-class="none">
-    <text wx:if="{{snow}}">snow</text>
+<swiper autoplay="{{true}}" vertical="{{true}}" class="head" circular="{{true}}">
+  <block wx:for="{{headlines}}" wx:key="*this">
+    <swiper-item item-id="">
+      <text>{{item.article_title}}</text>
+    </swiper-item>
+  </block>
+</swiper>
+
+<swiper autoplay="{{true}}" class="banner" circular="{{true}}" indicator-dots="{{true}}">
+  <block wx:for="{{banners}}" wx:key="*this">
+    <swiper-item item-id="">
+      <text>{{item.article_title}}</text>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="general">
+  <view class="arction-title">综合服务</view>
+  <view class="more">更多 ></view>
+  <view class="general-list">
+    <block wx:for="{{general}}" wx:for-item="gen" wx:for-index="gindex" wx:key="*this">
+      <view class="general-item" wx:if="{{gindex < 5}}" >
+        <image src="/images/ziliaoshouce.png" mode="aspectFill" lazy-load="{{true}}" class="general-img" />
+        <text class="general-text">{{gen.nav_title}}</text>
+      </view>
+    </block>
+  </view>
 </view>

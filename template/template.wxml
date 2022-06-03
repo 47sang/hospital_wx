@@ -1,0 +1,6 @@
+<template name="demo">
+    <view>我是{{name}}，今年{{age}}岁</view>
+</template>
+<template name="article">
+    <view class="article_title">{{article_id}}.{{article_title}}</view>
+</template>
